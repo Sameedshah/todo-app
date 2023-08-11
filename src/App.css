@@ -1,38 +1,161 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Handjet&family=Inter:wght@200;500;800&family=Poppins:wght@100;200;300;400;500;600&family=Raleway:wght@500&family=Ubuntu:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu";
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background: #34a1eb;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.block_div {
+  max-width: 400px; /* Set a maximum width */
+  height: auto; /* Adjust height for responsiveness */
+  background-color: #15205c;
+  display: flex;
+  align-self: center;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  margin: 20px; /* Add some margin for spacing */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.h1 {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  color: #3bebf5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.h3 {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #1a82e2;
+  font-size: 8pt;
+  margin: 15px 0;
+  font-family: 'Handjet', cursive;
+}
+
+.h_div {
   display: flex;
   flex-direction: column;
+  height: auto; /* Adjust height for responsiveness */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 10px;
+  padding: 0 20px; /* Add some horizontal padding */
+}
+
+.input01 {
+  position: relative;
+  text-align: center;
+  height: 30px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%; /* Adjust width for responsiveness */
+  max-width: 250px; /* Set a maximum width */
+  border-bottom: 2px solid #5d3bf5;
+  outline: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add {
+  min-height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #877db6;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  font-size: 30px;
+  font-weight: 400;
+  box-shadow: 5px 5px 15px -5px rgba(190, 187, 187, 0.3);
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add:hover {
+  background-color: #42f578;
+}
+
+.ol {
+  margin-top: 30px;
+  padding: 0 20px; /* Add some horizontal padding */
+}
+
+.ol .li {
+  list-style-type: none;
+  border: none;
+  background-color: #324196;
+  color: white;
+  padding: 3px;
+  padding-left: 5px;
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Adjusted to evenly distribute content */
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  text-align: left;
+}
+
+.icons {
+  display: flex; /* Use flex to align icons */
+}
+
+.icons i {
+  margin: 4px;
+  font-size: large;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+.icon-delete:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 8px;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+.checkmark.completed {
+  color: #1abc9c;
+}
+
+/* Style for completed todos */
+.li.completed {
+  text-decoration: line-through;
+  color: #999;
 }
